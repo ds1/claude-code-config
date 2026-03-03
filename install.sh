@@ -44,7 +44,10 @@ echo ""
 # Install CLAUDE.md
 if [[ -f "$CLAUDE_DIR/CLAUDE.md" ]] && ! $FORCE; then
     warn "~/.claude/CLAUDE.md already exists."
-    if confirm "  Overwrite it?"; then
+    warn "  Your existing CLAUDE.md may contain custom instructions."
+    if confirm "  Overwrite it? (Your current file will be backed up to CLAUDE.md.bak)"; then
+        cp "$CLAUDE_DIR/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md.bak"
+        info "Existing CLAUDE.md backed up to CLAUDE.md.bak"
         cp "$SCRIPT_DIR/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md"
         info "CLAUDE.md updated."
     else

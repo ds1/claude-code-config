@@ -35,7 +35,10 @@ Write-Host ""
 $claudeMdTarget = Join-Path $ClaudeDir "CLAUDE.md"
 if ((Test-Path $claudeMdTarget) -and -not $Force) {
     Write-Warn "~/.claude/CLAUDE.md already exists."
-    if (Confirm-Action "  Overwrite it?") {
+    Write-Warn "  Your existing CLAUDE.md may contain custom instructions."
+    if (Confirm-Action "  Overwrite it? (Your current file will be backed up to CLAUDE.md.bak)") {
+        Copy-Item $claudeMdTarget (Join-Path $ClaudeDir "CLAUDE.md.bak") -Force
+        Write-Info "Existing CLAUDE.md backed up to CLAUDE.md.bak"
         Copy-Item (Join-Path $ScriptDir "CLAUDE.md") $claudeMdTarget -Force
         Write-Info "CLAUDE.md updated."
     } else {
