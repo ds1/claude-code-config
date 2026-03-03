@@ -1,4 +1,4 @@
-# Claude Code Config
+# Claude Code Config (aka BOILERPLATE.md)
 
 By [@ds1](https://github.com/ds1) | [boilerplate.md](https://boilerplate.md)
 
