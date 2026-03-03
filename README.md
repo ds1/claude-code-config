@@ -170,6 +170,10 @@ These files from `~/.claude/` are excluded because they contain personal or sess
 
 Visit [boilerplate.md](https://boilerplate.md) for a guided setup experience, shareable links, and easy one-click installation options.
 
+## Contributing
+
+Have an idea for a new configuration, command, or improvement? Contributions are welcome. [Open an issue](https://github.com/ds1/claude-code-config/issues) to suggest ideas or [submit a pull request](https://github.com/ds1/claude-code-config/pulls) to contribute directly.
+
 ## Credits
 
 Created by [@ds1](https://github.com/ds1). Socratic probe commands adapted from [ds1/socratic-probes](https://github.com/ds1/socratic-probes).
