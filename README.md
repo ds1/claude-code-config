@@ -173,11 +173,34 @@ Visit [boilerplate.md](https://boilerplate.md) for a guided setup experience, sh
 
 ## Security Considerations
 
+This config ships with opinionated defaults that prioritize speed and minimal friction. Before installing, understand these tradeoffs:
+
 ### Bypass Permissions Mode
 
-The default `settings.json` enables bypass permissions mode, which auto-approves all tool calls matching the allow list. This is convenient for experienced users but means Claude Code can execute commands without prompting.
+The included `settings.json` sets `defaultMode: "bypassPermissions"`, which auto-approves all tool calls without prompting. This is powerful but means Claude can execute any command immediately.
+
+**Mitigations included:**
+- The **Safety Net** section in CLAUDE.md instructs Claude to announce destructive actions before executing
+- A **deny list** blocks `rm -rf`, `git push --force`, `git reset --hard`, and `drop table`
+- The **CLAUDE.md** instructions prohibit force-pushing to main/master and deleting files outside the project
 
 **If you prefer a safer default**, use `settings-safe.json` instead (same permissions, no bypass mode): `cp settings-safe.json ~/.claude/settings.json`. You can also use the [interactive configurator](https://boilerplate.md) and leave Bypass Permissions Mode unchecked.
+
+### Broad Wildcards
+
+Permissions like `Bash(curl:*)`, `Bash(python:*)`, `Bash(node:*)`, and `Bash(openssl:*)` allow any arguments to these tools. While convenient, this means a malicious file or prompt injection could potentially abuse these permissions to:
+- Download and execute arbitrary code (`curl ... | bash`)
+- Run arbitrary Python or Node.js scripts
+- Make network requests to unintended endpoints
+
+**Mitigation:** If you work with untrusted repos or documents, consider replacing wildcards with specific subcommands (e.g., `Bash(curl -s:*)` instead of `Bash(curl:*)`), or remove tools you don't regularly use.
+
+### Thin Deny List
+
+The deny list only blocks 4 patterns (`rm -rf`, `git push --force`, `git reset --hard`, `drop table`). Determined destructive commands could work around these (e.g., `rm -r` without `-f`, or `find ... -delete`).
+
+**Mitigation:** Add patterns for any destructive commands relevant to your stack. The deny list is a safety net, not a security boundary. The Safety Net section in CLAUDE.md provides a second layer of protection by instructing Claude to announce destructive actions before running them.
+
 
 ## Contributing
 
