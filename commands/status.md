@@ -14,4 +14,4 @@ Keep the summary short and actionable. Don't read CLAUDE.md for status. That's n
 
 ---
 
-*By [@ds1](https://github.com/ds1) — [claude-code-config](https://github.com/ds1/claude-code-config)*
+*By [@ds1](https://github.com/ds1) — [boilerplate.md](https://github.com/ds1/boilerplate.md)*

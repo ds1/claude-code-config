@@ -30,4 +30,4 @@ Keep the chat unblocked. Never run the dev server in the foreground of this sess
 
 ---
 
-*By [@ds1](https://github.com/ds1) — [claude-code-config](https://github.com/ds1/claude-code-config)*
+*By [@ds1](https://github.com/ds1) — [boilerplate.md](https://github.com/ds1/boilerplate.md)*

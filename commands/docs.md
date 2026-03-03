@@ -26,4 +26,4 @@ Manually trigger documentation updates to match current code state.
 
 ---
 
-*By [@ds1](https://github.com/ds1) — [claude-code-config](https://github.com/ds1/claude-code-config)*
+*By [@ds1](https://github.com/ds1) — [boilerplate.md](https://github.com/ds1/boilerplate.md)*

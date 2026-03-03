@@ -34,4 +34,4 @@ Create a pull request with a standardized format.
 
 ---
 
-*By [@ds1](https://github.com/ds1) — [claude-code-config](https://github.com/ds1/claude-code-config)*
+*By [@ds1](https://github.com/ds1) — [boilerplate.md](https://github.com/ds1/boilerplate.md)*
