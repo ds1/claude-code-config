@@ -25,6 +25,7 @@ Behavioral rules that apply to every Claude Code session:
 ### Settings (`settings.json`)
 
 - **Bypass permissions mode** with a curated allow/deny list for common CLI tools (npm, git, node, python, cargo, vercel, etc.)
+- **Safe mode variant** (`settings-safe.json`) — same permissions but uses the default `ask` mode instead of bypass. Copy this over `settings.json` if you prefer to approve each action.
 - **Deny list** for dangerous operations (`rm -rf`, `git push --force`, `git reset --hard`, `drop table`)
 - **PreCompact hook** that triggers automatic context saving before compaction
 - **Status line** showing context window usage percentage and model name (PowerShell)
@@ -169,6 +170,14 @@ These files from `~/.claude/` are excluded because they contain personal or sess
 ## Quick Start via boilerplate.md
 
 Visit [boilerplate.md](https://boilerplate.md) for a guided setup experience, shareable links, and easy one-click installation options.
+
+## Security Considerations
+
+### Bypass Permissions Mode
+
+The default `settings.json` enables bypass permissions mode, which auto-approves all tool calls matching the allow list. This is convenient for experienced users but means Claude Code can execute commands without prompting.
+
+**If you prefer a safer default**, use `settings-safe.json` instead (same permissions, no bypass mode): `cp settings-safe.json ~/.claude/settings.json`. You can also use the [interactive configurator](https://boilerplate.md) and leave Bypass Permissions Mode unchecked.
 
 ## Contributing
 
