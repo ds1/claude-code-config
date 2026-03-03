@@ -66,8 +66,8 @@ The `/probe-*` commands form a document analysis framework adapted from [ds1/soc
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-code-config.git
-cd claude-code-config
+git clone https://github.com/YOUR_USERNAME/boilerplate.md.git
+cd boilerplate.md
 chmod +x install.sh
 ./install.sh
 ```
@@ -75,8 +75,8 @@ chmod +x install.sh
 ### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/claude-code-config.git
-cd claude-code-config
+git clone https://github.com/YOUR_USERNAME/boilerplate.md.git
+cd boilerplate.md
 .\install.ps1
 ```
 
@@ -172,7 +172,7 @@ Visit [boilerplate.md](https://boilerplate.md) for a guided setup experience, sh
 
 ## Contributing
 
-Have an idea for a new configuration, command, or improvement? Contributions are welcome. [Open an issue](https://github.com/ds1/claude-code-config/issues) to suggest ideas or [submit a pull request](https://github.com/ds1/claude-code-config/pulls) to contribute directly.
+Have an idea for a new configuration, command, or improvement? Contributions are welcome. [Open an issue](https://github.com/ds1/boilerplate.md/issues) to suggest ideas or [submit a pull request](https://github.com/ds1/boilerplate.md/pulls) to contribute directly.
 
 ## Credits
 
