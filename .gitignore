@@ -1,0 +1,27 @@
+# Never commit these
+.credentials.json
+history.jsonl
+stats-cache.json
+*.db
+*.sqlite
+
+# Runtime directories
+backups/
+cache/
+debug/
+downloads/
+file-history/
+paste-cache/
+plans/
+projects/
+shell-snapshots/
+statsig/
+tasks/
+telemetry/
+todos/
+plugins/cache/
+plugins/marketplaces/
+
+# OS
+.DS_Store
+Thumbs.db
